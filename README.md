@@ -1,6 +1,6 @@
-# week6-1
+# week8-1
 
-第6周作業：https://jesseruby.github.io/hexschool-vue-week-6/
+第7+8周作業：https://jesseruby.github.io/hexschool-vue-week-78/
 
 ## Project setup
 ```
