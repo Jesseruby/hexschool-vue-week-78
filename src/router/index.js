@@ -14,7 +14,7 @@ const routes = [
         component: () => import('../views/ProductsView.vue'),
       },
       {
-        path: 'product/:id', // 單一產品 :動態的參數
+        path: 'product/:id', // 單一產品
         component: () => import('../views/ProductView.vue'),
       },
       {
@@ -29,19 +29,19 @@ const routes = [
   },
   // 後台
   {
-    path: '/admin', //後台首頁
+    path: '/admin', // 後台首頁
     component: () => import('../views/DashboardView.vue'),
     children: [
       {
-        path: 'products', // admin/products
+        path: 'products', // admin/products 後台產品列表
         component: () => import('../views/AdminProducts.vue'),
       },
       {
-        path: 'orders', // admin/products
+        path: 'orders', // admin/products 後台訂單管理
         component: () => import('../views/AdminOrders.vue'),
       },
       {
-        path: 'coupon', // admin/products
+        path: 'coupon', // admin/coupon 後台優惠劵
         component: () => import('../views/AdminCoupon.vue'),
       },
     ],
