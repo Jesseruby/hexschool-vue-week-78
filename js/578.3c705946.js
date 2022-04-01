@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkweek8"]=self["webpackChunkweek8"]||[]).push([[578],{2578:function(n,e,r){r.r(e),r.d(e,{default:function(){return l}});var t=r(6252);const u={class:"container"},c=(0,t._)("h2",null,"後台優惠券",-1),s=[c];function a(n,e){return(0,t.wg)(),(0,t.iD)("div",u,s)}var i=r(3744);const f={},k=(0,i.Z)(f,[["render",a]]);var l=k}}]);
+//# sourceMappingURL=578.3c705946.js.map
