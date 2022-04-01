@@ -1,4 +1,4 @@
-# week8-1
+# vue-hw-week8-1
 
 第7+8周作業：https://jesseruby.github.io/hexschool-vue-week-78/
 
