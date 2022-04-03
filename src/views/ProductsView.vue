@@ -1,12 +1,13 @@
 <template>
   <div class="container">
     <component-loading :active="isLoading"></component-loading>
-    <h2>前台產品列表</h2>
+    <h2 class="text-pinkdeep">產品列表</h2>
     <div class="container">
-      <div class="row row-cols-1 row-cols-lg-5 g-3">
+      <div class="row row-cols-1 row-cols-lg-4 g-4">
         <div class="col" v-for="product in products" :key="product.id">
-          <div class="card h-100">
-            <img :src="product.imageUrl" class="card-img-top" alt="..." />
+          <div class="card">
+            <img :src="product.imageUrl" class="card-img-top" alt="..."
+              style="object-fit: cover;height:300px"/>
             <div class="card-body">
               <h5 class="card-title">{{ product.title }}</h5>
               <p class="card-text">
@@ -23,7 +24,7 @@
             <div class="card-footer bg-white">
               <div class="d-grid gap-2 text-center d-md-block">
                 <button type="button"
-                  class="btn my-2 me-2 btn-outline-primary btn-sm"
+                  class="btn my-2 me-2 btn-outline-pinkdeep btn-sm"
                   :disabled="isLoadingItem === product.id"
                   @click="openProductModal(product.id)">
                   <font-awesome-icon
@@ -32,7 +33,7 @@
                   查看更多
                 </button>
                 <button type="button"
-                  class="btn btn-primary btn-sm"
+                  class="btn btn-pinkdeep btn-sm"
                   :disabled="isLoadingItem === product.id"
                   @click="addCart(product.id)">
                   <font-awesome-icon
@@ -60,9 +61,9 @@
 </template>
 
 <script>
+import PagePagination from '@/components/PagePagination.vue';
 import emitter from '@/libs/emitter';
 import ProductModal from '@/components/ProductModal.vue';
-// import PagePagination from '@/components/PagePagination.vue';
 
 export default {
   data() {
@@ -84,8 +85,8 @@ export default {
     };
   },
   components: {
+    PagePagination,
     ProductModal,
-    // PagePagination,
   },
   methods: {
     addCart(id, qty = 1) {
@@ -123,3 +124,26 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+@import "bootstrap/scss/bootstrap";
+/*自訂樣式*/
+.text-pink{ color: #ffabc2;}
+.text-pinkdeep{ color: #ff789c;}
+.bg-pink { background-color: #ffabc2;}
+.btn-pink {
+  color: #212529;
+  background-color: #ffdee7;
+  border-color: #ffdee7;
+}
+.btn-pinkdeep {
+  color: #fff;
+  background-color: #ff789c;
+  border-color: #ff789c;
+}
+.btn-outline-pinkdeep {
+  color: #ff789c;
+  background-color: #fff;
+  border-color: #ff789c;
+}
+</style>
