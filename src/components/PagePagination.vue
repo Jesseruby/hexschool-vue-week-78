@@ -32,3 +32,24 @@ export default {
   props: ['pages'],
 };
 </script>
+
+<style lang="scss" scoped>
+@import "bootstrap/scss/bootstrap";
+/*自訂樣式*/
+.text-pink{ color: #ffabc2;}
+.text-pinkdeep{ color: #ff789c;}
+.bg-pink { background-color: #ffabc2;}
+.btn-pink {
+  color: #212529;
+  background-color: #ffdee7;
+  border-color: #ffdee7;
+}
+.page-item.active .page-link {
+  color: #fff;
+  background-color: #ffabc2;
+  border-color: #ffabc2;
+}
+.page-link {
+  color: #ffabc2;
+}
+</style>
