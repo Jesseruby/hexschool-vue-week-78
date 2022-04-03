@@ -1,7 +1,7 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-pink">
     <div class="container-fluid">
-      <router-link class="navbar-brand" to="/">Jesse</router-link>
+      <router-link class="navbar-brand text-pinkdeep fw-bold" to="/">波波小舖</router-link>
       <button type="button"
         class="navbar-toggler"
         data-bs-toggle="collapse"
@@ -15,42 +15,37 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <router-link class="nav-link"
-              to="/">
-              首頁
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link"
               to="/products">
-              前台產品列表
+              產品列表
             </router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link"
               to="/cart">
-              前台購物車
+              購物車
             </router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link"
               to="/login">
-              登入產品後台
+              登入後台
             </router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link"
               v-if="status === true"
               to="/admin/products">
-              產品後台
+              後台產品列表
             </router-link>
           </li>
         </ul>
       </div><!-- .navbarSupportedContent -->
       <router-link type="button"
-        class="btn btn-primary"
+        class="btn btn-dark"
+        style="background-color: #ff789c;border-color: #ff789c;"
         to="/cart">
         購物車
-        <span class="badge rounded-pill bg-danger">
+        <span class="badge rounded-pill bg-warning">
           {{ cartData?.carts?.length }}
         </span>
       </router-link>
@@ -105,3 +100,11 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+@import "bootstrap/scss/bootstrap";
+/*自訂樣式*/
+.text-pink{ color: #ffabc2!important;}
+.text-pinkdeep{ color: #ff789c!important;}
+.bg-pink { background-color: #ffdee7!important;}
+</style>
