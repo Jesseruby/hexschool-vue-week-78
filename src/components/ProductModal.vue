@@ -9,10 +9,10 @@
     ref="modal">
     <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content border-0">
-        <div class="modal-header bg-dark text-white">
-          <h5 class="modal-title" id="exampleModalLabel">
+        <div class="modal-header bg-pinkdeep text-wite">
+          <h4 class="modal-title ms-auto">
             <span>{{ product.title }}</span>
-          </h5>
+          </h4>
           <button type="button"
             class="btn-close"
             data-bs-dismiss="modal"
@@ -22,10 +22,11 @@
         <div class="modal-body">
           <div class="row">
             <div class="col-sm-6">
-              <img class="img-fluid" :src="product.imageUrl" alt="" />
+              <img class="img-fluid" :src="product.imageUrl" alt=""
+                style="object-fit: cover;height:600px;width: 100%;"/>
             </div>
             <div class="col-sm-6">
-              <span class="badge bg-primary rounded-pill">
+              <span class="badge bg-pinkdeep rounded-pill">
                 {{  product.category }}
               </span>
               <p>商品描述：{{ product.description }}</p>
@@ -41,7 +42,7 @@
                     </option>
                   </select>
                   <button type="button"
-                    class="btn btn-primary"
+                    class="btn btn-pinkdeep"
                     @click="$emit('add-cart', product.id, qty)">
                     加入購物車
                   </button>
@@ -101,3 +102,27 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+@import "bootstrap/scss/bootstrap";
+/*自訂樣式*/
+.text-pink{ color: #ffabc2;}
+.text-pinkdeep{ color: #ff789c;}
+.bg-pinkdeep{ background-color: #ff789c;}
+.bg-pink { background-color: #ffabc2;}
+.btn-pink {
+  color: #212529;
+  background-color: #ffdee7;
+  border-color: #ffdee7;
+}
+.btn-pinkdeep {
+  color: #fff;
+  background-color: #ff789c;
+  border-color: #ff789c;
+}
+.btn-outline-pinkdeep {
+  color: #ff789c;
+  background-color: #fff;
+  border-color: #ff789c;
+}
+</style>
