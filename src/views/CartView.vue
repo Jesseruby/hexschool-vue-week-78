@@ -7,6 +7,7 @@
         <div class="text-end">
           <button type="button"
             class="btn btn-danger"
+            style="background-color: #ff789c;border-color: #ff789c;"
             @click="delAllCarts"
             :disabled="cartData.carts.length === 0">
             清空購物車
@@ -143,6 +144,7 @@
         <div class="text-end">
           <button type="submit"
             class="btn btn-danger"
+            style="background-color: #ff789c;border-color: #ff789c;"
             :disabled="Object.keys(errors).length > 0 || cartData.carts.length === 0">
             送出訂單
           </button>
